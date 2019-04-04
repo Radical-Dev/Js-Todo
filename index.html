@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="styles.css">
+<body>
+    <div class="container" >
+        <div class="row">
+            <div class="col s12 card hoverable" id="body-contain">
+                <h2 class="todo-head center ">Radical Planner</h2>
+                <div class="row " id="appContain">
+                    <div class="col s6" id="todoContainer">
+                        <h4>Todo List</h4>
+                        <a class="btn-floating btn-small waves-effect waves-light red right"><i class="material-icons todoBtn taskModal">add</i></a>
+                        <ul id="todoList" class="collection">
+                        </ul>
+                    </div> 
+                    <div class="col s6">
+                        <h4>Daily Development Tasks</h4>
+                        <a class="btn-floating btn-small waves-effect waves-light red right"><i class="material-icons todoBtn devMdl">add</i></a>
+                        <ul id="devList" class="collection">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="todoModal red white-text">
+            <div class="input-field">
+                <label class="white-text" for="taskName">Task</label>
+                <input type="text" name="taskName" id="todoName">
+                <select class="white-text" name="taskPriority" id="todoPriority">
+                    <option value="" disabled selected>Priority</option>
+                    <option value="High">High</option>
+                    <option value="Med">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <a class="btn modal-button">Save</a>
+            </div>
+        </div>
+
+        <div class="devModal amber darken-4 white-text">
+            <div class="input-field">
+                <label class="white-text" for="devTaskName">Personal Development Task</label>
+                <input type="text" name="devTaskName" id="devTodoName">
+                <!-- For future updates I will be adding notes section with modal popup -->
+                <a id="devModal--save" class="btn modal-button">Save</a>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="overlay"> <a id="close" class="btn-floating btn-small waves-effect waves-light red right"><i class="material-icons">remove</i></a></div>
+ 
+    
+    
+     <!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+<script src="todo.js" type="text/javascript"></script>
+<script src="app.js" type="text/javascript"></script>
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, "sel");
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.todoModal{
+    position: fixed;
+    z-index: 1000;
+    width:40%;
+    top: 40%;
+    left: 30%;
+    padding: 30px;
+    display: none;
+}
+
+.devModal{
+    position: fixed;
+    z-index: 1000;
+    width:40%;
+    top: 40%;
+    left: 30%;
+    padding: 30px;
+    display: none;
+}
+
+.overlay{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.39);
+    display: none;
+}
+
+.modal-button{
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.deleteBtn{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+body{
+    background-image: url("backgrnd.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+i.deleteBtn{
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.collection-item:hover i.deleteBtn{
+    opacity: 1;
+}
